@@ -2,9 +2,13 @@
   "name": "node-js",
   "version": "1.0.0",
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "connect-multiparty": "^2.2.0",
+    "cookie-parser": "^1.4.5",
     "express": "^4.17.1",
     "jade": "^1.11.0",
-    "jude": "0.0.3"
+    "jude": "0.0.3",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
     "ejs": "^3.1.6"
