@@ -6,11 +6,13 @@
     "connect-multiparty": "^2.2.0",
     "cookie-parser": "^1.4.5",
     "express": "^4.17.1",
+    "express-generator": "^4.16.1",
     "express-session": "^1.17.2",
     "jade": "^1.11.0",
     "jude": "0.0.3",
     "morgan": "^1.10.0",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "socket.io": "^4.2.0"
   },
   "devDependencies": {
     "ejs": "^3.1.6"
