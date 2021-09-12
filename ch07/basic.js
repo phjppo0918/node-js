@@ -12,4 +12,4 @@ http.createServer(function (request, response) {
     });
 }).listen(12345, function () {
     console.log('hello 123');
-})
+});

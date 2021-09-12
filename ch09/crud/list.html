@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LIST</title>
+</head>
+<body>
+<a href="/insert"> INSERT DATA</a>
+
+<table width="100%" border="1">
+  <tr>
+    <th>DELETE</th>
+    <th>EDIT</th>
+    <th>ID</th>
+    <th>NAME</th>
+    <th>Model Number</th>
+    <th>Series</th>
+  </tr>
+
+<% data.forEach(function (item, index) { %>
+  <tr>
+    <th><a href="/delete/<%= item.id%>">DELETE</a> </th>
+    <th><a href="/edit/<%= item.id%>">EDIT</a></th>
+    <th><%= item.id %></th>
+    <th><%= item.name %></th>
+    <th><%= item.modelnumber %></th>
+    <th><%= item.series %></th>
+  </tr>
+  <% }); %>
+</table>
+</body>
+</html>
