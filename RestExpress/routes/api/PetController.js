@@ -1,14 +1,9 @@
-const mongoose = require('mongoose');
-const Types = mongoose.Schema.Types
+const express = require('express');
+const router = express.Router();
+const PetService = require('../../model/PetService')
 
-const petSchema = mongoose.Schema({
-
-    name: { type: String },
-	// 직위
-    greed: { type: String },
-    // 계급
-    age: { type: Number }  
+router.get('', (req, res) => {
+   res.send(PetService.findAll());
 });
 
-
-module.exports = mongoose.model('Pet', petSchema);
+module.exports = router;

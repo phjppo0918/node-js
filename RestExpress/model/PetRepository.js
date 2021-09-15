@@ -1,5 +1,10 @@
-var mongoose = require('mongoose');
-const petSechma = require('./Pet');
-var pet = mongoose.model('Pet', petSechma);
+const pet = require('./Pet');
 
-var petRepository = 
+async function findAll() {
+		return await Promise.resolve(pet.find());
+}
+
+module.exports.findAll = findAll;
+
+
+

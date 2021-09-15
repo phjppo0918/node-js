@@ -4,13 +4,13 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var mongoose = require('./mongo.js');
+var mongoose = require('./MongoConnection.js');
 mongoose();
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var userRouter = require('./routes/api/user');
-
+var petRouter = require('./routes/api/PetController');
 var app = express();
 
 // view engine setup
@@ -26,6 +26,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/api/user', userRouter);
+app.use('/api/pet', petRouter);
+
 
 
 // catch 404 and forward to error handler
