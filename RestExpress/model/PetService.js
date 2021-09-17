@@ -11,5 +11,12 @@ async function findById(id) {
 	return result;
 }
 
+async function save(params){
+	var result;
+	await petSchema.create(params).then(rs => result = rs.id);
+	return result;
+}
+
 module.exports.findAll = findAll;
 module.exports.findById = findById;
+module.exports.save = save;
