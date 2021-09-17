@@ -10,7 +10,7 @@ mongoose();
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var userRouter = require('./routes/api/user');
-var petRouter = require('./routes/api/PetController');
+var petRouter = require('./routes/api/PetRouter');
 var app = express();
 
 // view engine setup

@@ -3,7 +3,7 @@ const router = express.Router();
 const PetService = require('../../model/PetService')
 
 router.get('', (req, res) => {
-   res.send(PetService.findAll());
+   PetService.findAll().then(re => res.send(re));
 });
 
 module.exports = router;
