@@ -1,8 +1,6 @@
-var express = require('express');
-var mongojs = require('mongojs');
-var router = express.Router();
-
-var db = mongojs('node', ['user']);
+const express = require('express');
+const router = express.Router();
+const UserService = require('../../model/UserService')
 
 /* GET users listing. */
 /*
@@ -12,8 +10,10 @@ router.get('/', function(req, res, next) {
 	});
 });*/
 
-router.post('', (req,res) =>
-		   db.user.find((error, data) => 
-						res.send(data) ));
+router.post('', (req, res) => {
+	UserService.create(req.body)
+		.then(re => {console.log(re);
+					res.send(re);});
+});
 
 module.exports = router;

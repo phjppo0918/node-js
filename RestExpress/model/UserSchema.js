@@ -3,9 +3,11 @@ const Types = mongoose.Schema.Types;
 
 const userSchema = mongoose.Schema({
 	email: { type:String},
-	passwrod: {type:String},
+	password: {type:String},
 	name: {type:String},
 	age: {type:Number}
+}, {
+    versionKey: false
 })
 
 userSchema.statics.create = function(payload) {
