@@ -22,5 +22,4 @@ petSchema.statics.findAll = function() {
 petSchema.statics.findOneById = (id) => this.findOne({id});
 
 
-
 module.exports = mongoose.model('Pet', petSchema);

@@ -16,6 +16,10 @@ userSchema.statics.create = function(payload) {
 	return user.save();
 }
 
-userSchema.statics.findOneByEmail = (email) => this.findOne({email});
+userSchema.statics.findOneByEmail = function (email) {
+
+	return this.findOne({email});
+} 
+
 
 module.exports = mongoose.model('User', userSchema);
