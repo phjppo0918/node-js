@@ -12,7 +12,7 @@ router.get('/', function(req, res, next) {
 	});
 });*/
 
-router.get('/', (req,res,next) =>
+router.post('', (req,res) =>
 		   db.user.find((error, data) => 
 						res.send(data) ));
 

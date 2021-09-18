@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Types = mongoose.Schema.Types
+const Types = mongoose.Schema.Types;
 
 const petSchema = mongoose.Schema({
 
